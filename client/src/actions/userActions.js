@@ -29,7 +29,7 @@ export function getUser() {
 
 export function loginUser(credentials) {
   return(dispatch) => {
-    dispatch({type: 'LOGGING_IN'}); // alter to logging_in
+    dispatch({type: 'LOGGING_IN'});
     post('/api/user_token', credentials)
        .then(response => {
          localStorage.setItem("jwt", response.data.token.token)

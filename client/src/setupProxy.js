@@ -1,6 +1,6 @@
 const proxy = require('http-proxy-middleware');
 module.exports = function(app) {
     app.use(proxy('/api',
-        { target: 'https://stroke-thief.herokuapp.com/' }
+        { target: 'http://localhost:3001/' }
     ));
 }
