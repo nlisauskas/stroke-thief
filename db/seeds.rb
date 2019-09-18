@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-#User.create(
-#{name: 'Nick', hometown: 'Aurora', email:'nick.lisauskas@gmail.com', password: '1022Madison', password_confirmation: '1022Madison', admin: true}
-#)
+User.create(
+{name: 'Nick', hometown: 'Aurora', email:'nick.lisauskas@gmail.com', password: '1022Madison', password_confirmation: '1022Madison', admin: true}
+)
 
 Course.create(
 [{name: 'Naples Grande - Yellow', city: 'Naples', state: 'FL', slope: 113, rating: 71},
@@ -17,6 +17,7 @@ Course.create(
   {name: 'TPC Sawgrass', city: 'Jacksonville', state: 'FL', slope: 113, rating: 71},
 ]
 )
+
 Round.create(
 [{score: 74, putts: 30, user_id: 1 , course_id: 1},
   {score: 74, putts: 30, user_id: 2 , course_id: 2},

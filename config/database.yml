@@ -8,7 +8,7 @@ test:
   database: scratch_golfer_v2_test
   pool: 5
   timeout: 5000
-production:
+production: 
   adapter: postgresql
   database: scratch_golfer_v2_production
   pool: 5
