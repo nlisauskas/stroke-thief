@@ -1,3 +1,5 @@
+//let token = "Bearer " + localStorage.getItem("jwt");
+//axios({method: 'get', url: `/api/rounds/${this.props.match.params.id}`, headers: {'Authorization': token }})
 
 export function getCourses() {
   return (dispatch) => {
