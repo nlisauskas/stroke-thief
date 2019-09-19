@@ -9,7 +9,7 @@
 
 User.create(
 {name: 'Nick', hometown: 'Aurora', email:'nick.lisauskas@gmail.com', password: '1022Madison', password_confirmation: '1022Madison', admin: true}
-)
+  )
 
 Course.create(
 [{name: 'Naples Grande - Yellow', city: 'Naples', state: 'FL', slope: 113, rating: 71},
