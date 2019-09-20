@@ -8,7 +8,7 @@ Knock.setup do |config|
   ##
   ## Default:
   # config.token_lifetime = 1.day
-config.token_secret_signature_key = -> { Rails.application.credentials.fetch(:secret_key_base) }
+config.token_secret_signature_key = -> { Rails.application.credentials.read }
 config.token_lifetime = 1.day
   ## Audience claim
   ## --------------
