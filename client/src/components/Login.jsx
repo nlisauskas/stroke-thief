@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { post } from 'axios';
 import {connect} from 'react-redux';
 import {loginUser} from '../actions/userActions';
-import history from '../history';
 
 class Login extends Component {
   constructor() {
@@ -20,7 +18,7 @@ class Login extends Component {
   //  post('/api/user_token', request)
   //    .then(response => {
   //      localStorage.setItem("jwt", response.data.jwt);
-  
+
   //    })
   //    .catch(error => console.log('error', error));
  }

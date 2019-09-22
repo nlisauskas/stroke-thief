@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Header from './components/Header';
 import RoundsContainer from './containers/RoundsContainer';
+import StripeForm from './containers/StripeForm';
 import SignupPage from './containers/SignupPage';
 import {BrowserRouter as Router, Route, Link, NavLink, Switch} from 'react-router-dom'
 import {logOutUser} from './actions/userActions';
@@ -42,6 +43,7 @@ class App extends React.Component {
               <div>
               <Route exact path="/" component={Dashboard}/>
               <Route path="/rounds" component={RoundsContainer}/>
+              <StripeForm />
               </div>
             :
               <div>

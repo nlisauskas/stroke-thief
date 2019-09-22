@@ -1,5 +1,4 @@
-import {axios, post, get} from 'axios';
-import history from '../history';
+import {post} from 'axios';
 
 export function getUser() {
   var token = localStorage.getItem("jwt");
