@@ -24,7 +24,7 @@ export default class TakeMoney extends React.Component {
         ComponentClass="div"
         amount={499} // cents
         currency="USD"
-        stripeKey="pk_test_A57nVD8fvlslgNLkUV7Egqb3001pLd5y5X"
+        stripeKey="pk_live_OrogvAWx8HdlqspDmGIUkA7W0062OkSbui"
         locale="en"
         //email="nick.lisauskas@gmail.com"
         // Note: Enabling either address option will give the user the ability to
