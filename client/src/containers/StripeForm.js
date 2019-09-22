@@ -19,9 +19,26 @@ export default class TakeMoney extends React.Component {
     return (
       // ...
       <StripeCheckout
-        token={this.onToken}
+        name="Stroke Thief" // the pop-in header title
+        description="Lifetime Access" // the pop-in header subtitle
+        ComponentClass="div"
+        amount={499} // cents
+        currency="USD"
         stripeKey="pk_test_A57nVD8fvlslgNLkUV7Egqb3001pLd5y5X"
-      />
+        locale="en"
+        //email="nick.lisauskas@gmail.com"
+        // Note: Enabling either address option will give the user the ability to
+        // fill out both. Addresses are sent as a second parameter in the token callback.
+        zipCode={false}
+        allowRememberMe // "Remember Me" option (default true)
+        token={this.onToken} // submit callback
+        opened={this.onOpened} // called when the checkout popin is opened (no IE6/7)
+        closed={this.onClosed} // called when the checkout popin is closed (no IE6/7)
+        >
+        <button className="btn btn-primary">
+          Gain Lifetime Access to Stroke Thief
+        </button>
+      </StripeCheckout>
     )
   }
 }

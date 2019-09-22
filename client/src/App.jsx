@@ -41,9 +41,9 @@ class App extends React.Component {
 
               this.props.loggedIn || localStorage.getItem('jwt')  ?
               <div>
+              <StripeForm />
               <Route exact path="/" component={Dashboard}/>
               <Route path="/rounds" component={RoundsContainer}/>
-              <StripeForm />
               </div>
             :
               <div>
