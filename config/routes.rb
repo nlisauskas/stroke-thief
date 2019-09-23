@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope '/api' do
     post 'user_token' => 'user_token#create'
     get 'users/current' => 'users#current'
+    post 'charge' => 'charges#create'
     resources :users do
       resources :rounds
       resources :courses

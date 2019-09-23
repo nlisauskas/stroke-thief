@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
   wrap_parameters :user, include: [:name, :email, :password, :password_confirmation, :admin, :handicap, :hometown, :birthday, :age]
-
+  require 'pry'
   # GET /users
   def index
     @users = User.all

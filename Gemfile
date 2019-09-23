@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'pg'
 gem 'pry'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'stripe'
 # Use Puma as the app server
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

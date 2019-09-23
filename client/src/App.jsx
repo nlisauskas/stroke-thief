@@ -5,7 +5,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Header from './components/Header';
 import RoundsContainer from './containers/RoundsContainer';
-import StripeForm from './containers/StripeForm';
+import StripeContainer from './containers/StripeContainer';
 import SignupPage from './containers/SignupPage';
 import {BrowserRouter as Router, Route, Link, NavLink, Switch} from 'react-router-dom'
 import {logOutUser} from './actions/userActions';
@@ -29,6 +29,7 @@ class App extends React.Component {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item"><Link exact className="nav-link" activeClassName="active" to="/">Home</Link></li>
             <li className="nav-item"><Link exact className="nav-link" activeClassName="active" to="/rounds">Rounds</Link></li>
+            <li className="nav-item"><Link exact className="nav-link" activeClassName="active" to="/lifetime">Lifetime Membership</Link></li>
             {
                this.props.loggedIn || localStorage.getItem('jwt')  ?
                 <li className="nav-item"><Link exact className="nav-link" to="/logout" onClick={this.logOut}>Log Out</Link></li>
@@ -41,9 +42,9 @@ class App extends React.Component {
 
               this.props.loggedIn || localStorage.getItem('jwt')  ?
               <div>
-              <StripeForm />
               <Route exact path="/" component={Dashboard}/>
               <Route path="/rounds" component={RoundsContainer}/>
+              <Route path="/lifetime" component={StripeContainer}/>
               </div>
             :
               <div>
