@@ -4,6 +4,7 @@ import './stylesheets/App.css';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Header from './components/Header';
+import About from './components/About';
 import RoundsContainer from './containers/RoundsContainer';
 import StripeContainer from './containers/StripeContainer';
 import SignupPage from './containers/SignupPage';
@@ -28,6 +29,7 @@ class App extends React.Component {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item"><Link exact className="nav-link" activeClassName="active" to="/">Home</Link></li>
+            <li className="nav-item"><Link exact className="nav-link" activeClassName="active" to="/about">About Us</Link></li>
             <li className="nav-item"><Link exact className="nav-link" activeClassName="active" to="/rounds">Rounds</Link></li>
             <li className="nav-item"><Link exact className="nav-link" activeClassName="active" to="/lifetime">Lifetime Membership</Link></li>
             {
@@ -43,6 +45,7 @@ class App extends React.Component {
               this.props.loggedIn || localStorage.getItem('jwt')  ?
               <div>
               <Route exact path="/" component={Dashboard}/>
+              <Route path="/about" component={About}/>
               <Route path="/rounds" component={RoundsContainer}/>
               <Route path="/lifetime" component={StripeContainer}/>
               </div>
@@ -52,7 +55,10 @@ class App extends React.Component {
                 this.props.signUpSuccess ?
               <Route path="/login" component={Login} />
               :
+              <div>
               <Route exact path="/" component={SignupPage}/>
+              <Route path="/about" component={About}/>
+              </div>
               }
 
               {
