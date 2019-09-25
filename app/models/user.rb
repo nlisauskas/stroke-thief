@@ -8,7 +8,7 @@ class User < ApplicationRecord
   def differentials
     differential_array = []
     self.rounds.each do |round|
-      differential = (round.score - round.course.rating) * 113 / round.course.slope
+      differential = ((round.score - round.course.rating) * 113 / (round.course.slope)).to_f
       differential_array << differential
     end
     differential_array
