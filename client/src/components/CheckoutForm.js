@@ -39,7 +39,7 @@ class CheckoutForm extends Component {
 
     return (
       <div className="checkout">
-        <p>Would you like to complete the purchase?</p>
+        <p>Fill out the information below to become a lifetime Stroke Thief member for $4.99.</p>
         <CardElement />
         <button onClick={this.submit}>Purchase</button>
       </div>

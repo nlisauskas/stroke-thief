@@ -4,6 +4,7 @@ import Round from '../components/Round';
 import { getRounds, editRound, deleteRound } from '../actions/roundActions';
 import RoundForm from './RoundForm';
 import EditRound from './EditRound';
+import CourseForm from './CourseForm';
 
 class RoundsContainer extends Component {
 
@@ -25,6 +26,7 @@ class RoundsContainer extends Component {
         <div>
           <p>Log your first round!</p>
           <RoundForm />
+          <CourseForm />
         </div>
       )
     } else {
@@ -33,6 +35,7 @@ class RoundsContainer extends Component {
           <strong>Take a look at your rounds below!</strong>
           {this.renderRounds()}
           <RoundForm />
+          <CourseForm />
         </div>
       );
     }

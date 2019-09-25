@@ -4,7 +4,7 @@ class ChargesController < ApplicationController
 
 def create
 
-    Stripe.api_key = 'sk_test_xX7MGfNDLzeJfBSlLCm4AIkk00pIeM2jEn'
+    Stripe.api_key = Rails.application.credentials.dig(:stripe_live)
 
     begin
 

@@ -5,7 +5,7 @@ import CheckoutForm from '../components/CheckoutForm';
 class StripeContainer extends Component {
   render() {
     return (
-      <StripeProvider apiKey="pk_test_A57nVD8fvlslgNLkUV7Egqb3001pLd5y5X">
+      <StripeProvider apiKey="pk_live_OrogvAWx8HdlqspDmGIUkA7W0062OkSbui">
         <div className="example">
           <h1>React Stripe Elements Example</h1>
           <Elements>
